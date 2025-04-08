@@ -34,7 +34,7 @@ haddy_src
 Then run with the demo site:
 
 ```shell
-$ docker run -v haddy_src:/usr/local/src -p 8080:80 docker.io/mwmahlberg/haddy:1.0.0-caddy2.9.1-alpine
+$ docker run -v haddy_src:/usr/local/src -p 8080:80 docker.io/mwmahlberg/haddy:1.0.1-caddy2.9.1-alpine
 {"level":"info","ts":1744100254.9286692,"msg":"using config from file","file":"/etc/caddy/Caddyfile"}
 {"level":"info","ts":1744100254.9300873,"msg":"adapted config to JSON","adapter":"caddyfile"}
 {"level":"info","ts":1744100254.931229,"logger":"admin","msg":"admin endpoint started","address":"localhost:2019","enforce_origin":false,"origins":["//localhost:2019","//[::1]:2019","//127.0.0.1:2019"]}
@@ -70,7 +70,7 @@ $ docker run \
 -e REPO=$YOUR_REPO_URL
 -v haddy_src:/usr/local/src \
 -v $(PWD)/Caddyfile:/etc/caddy/Caddyfile \
--p 8080:80 docker.io/mwmahlberg/haddy:1.0.0-caddy2.9.1-alpine
+-p 8080:80 docker.io/mwmahlberg/haddy:1.0.1-caddy2.9.1-alpine
 ```
 
 ### Using a private repository
@@ -109,7 +109,7 @@ docker run
 -v $(PWD)/Caddyfile:/etc/caddy/Caddyfile \
 -v path/to/ssh-privkey:/root/.ssh/id_rsa
 -p 8080:80 \
-docker.io/mwmahlberg/haddy:1.0.0-caddy2.9.1-alpine
+docker.io/mwmahlberg/haddy:1.0.1-caddy2.9.1-alpine
 ```
 
 Further reading:
