@@ -2,7 +2,7 @@
 	debug
 	git {
 		repo site {
-			base_dir /tmp
+			base_dir /usr/local/src
 			url https://github.com/mwmahlberg/haddy-demosite.git
 			branch main
 			update every 60

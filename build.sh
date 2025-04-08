@@ -1,7 +1,7 @@
 #!/bin/sh
 # set -e
 # set -o pipefail
-cd /tmp/site
+cd /usr/local/src/site
 if [ -f .buildlock ]; then
   echo "Build is already in progress. Exiting."
   exit 0
