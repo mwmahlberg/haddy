@@ -8,4 +8,6 @@ if [ -f /tmp/.buildlock ]; then
 fi
 trap "rm -f /tmp/.buildlock" EXIT
 touch /tmp/.buildlock
-git submodule init && git submodule update --progress && /usr/bin/hugo build --destination /srv
+git submodule init
+git submodule update --progress
+/usr/bin/hugo build --destination /srv
