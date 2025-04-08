@@ -22,6 +22,8 @@ Using haddy
 
 ### Demo-Site
 
+The demo site uses [github.com/mwmahlberg/haddy-demosite][gh:haddy-demo].
+
 Create a docker volume:
 
 ```shell
@@ -45,6 +47,8 @@ Wait until you see the following line:
 ```json
 {"level":"info","ts":1744101591.6987336,"logger":"git","msg":"provisioned app instance","app":"git"}
 ```
+
+and then open [http://localhost:8080](http://localhost:8080).
 
 ### Quickstart
 
@@ -151,6 +155,7 @@ Please also refer to hugo's official documentation and your theme's docs.
 [hugo:themes]: https://themes.gohugo.io "Hugo themes"
 [caddy]: https://caddyserver.com "Caddy project website"
 [gh:greenpau]: https://github.com/greenpau "GitGub profile of Paul Green"
+[gh:haddy-demo]: https://github.com/mwmahlberg/haddy-demosite "Hugo demo site"
 [caddy:caddyfile]: https://caddyserver.com/docs/caddyfile/concepts "Caddyfile concepts"
 [caddy:git]: https://github.com/greenpau/caddy-git "caddy-git documentation"
 [git:ssh]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key "4.3 Git on the Server - Generating Your SSH Public Key"
