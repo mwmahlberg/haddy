@@ -15,13 +15,5 @@
 
 :80 {
 	root * /srv
-	file_server {
-		root /srv
-		hide .git
-	}
-	# reverse_proxy /api/* localhost:8080
-	# reverse_proxy /hugo/* localhost:1313
-	# handle_errors {
-	# respond "Error" 500
-	# }
+	file_server
 }
