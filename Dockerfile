@@ -8,8 +8,10 @@ FROM caddy:${CADDY_VERSION}-alpine
 VOLUME /usr/local/src
 ENV REPO="https://github.com/mwmahlberg/haddy-demosite.git"
 ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+ENV INTERVAL=60
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo && \
     apk add --no-cache git && \
     mkdir -p /usr/local/src
 ADD build.sh /usr/local/bin/build.sh
+ADD Caddyfile /etc/caddy/Caddyfile
