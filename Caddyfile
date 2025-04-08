@@ -1,5 +1,4 @@
 {
-	debug
 	git {
 		repo site {
 			base_dir /usr/local/src
