@@ -1,0 +1,28 @@
+{
+	debug
+	git {
+		repo site {
+			base_dir /tmp
+			url https://github.com/mwmahlberg/haddy-demosite.git
+			branch main
+			update every 60
+			post pull exec {
+				name hugo
+				command /usr/local/bin/build.sh
+			}
+		}
+	}
+}
+
+:80 {
+	root * /srv
+	file_server {
+		root /srv
+		hide .git
+	}
+	# reverse_proxy /api/* localhost:8080
+	# reverse_proxy /hugo/* localhost:1313
+	# handle_errors {
+	# respond "Error" 500
+	# }
+}
